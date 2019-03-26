@@ -75,15 +75,3 @@ class Point():
         self.y = y
         
 
-if __name__ == '__main__':
-
-    rec1 = Rectangle(100, 200)
-    rec2 = Rectangle(300, 300)
-
-    sr = ShapeRendererBase(500, 700, 'output.html')
-
-    sr.add_shape(Point(400, 100), rec1)
-    sr.add_shape(Point(200, 300), rec2)
-
-    sr.render_shapes()
-
