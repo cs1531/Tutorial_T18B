@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+# simple Shape abstract class
+# with two abstract methods, render and scale
 class Shape(ABC):
 
     def __init__(self):
@@ -13,6 +15,8 @@ class Shape(ABC):
     def scale(self, scalar):
         pass
 
+# implementing the Shape abstract class as a Rectangle
+# required to implement the above two methods
 class Rectangle(Shape):
 
     def __init__(self, height, width):
@@ -29,7 +33,7 @@ class Rectangle(Shape):
         self._height *= scalar
         self._width *= scalar
 
-    def render(self, point):
+    def render(self, point): # please dont worry about this, if you werent present for the tutorial
         return [ \
                 'fillRect(%d, %d, %d, %d)' % (point.getx(), point.gety(), self._width, self._height) \
                 ]

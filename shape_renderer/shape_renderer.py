@@ -1,5 +1,9 @@
 from shape_renderer_base import ShapeRendererBase
 
+# extending the base class
+# very nice way to combat requirement changes
+# and very nice way to split core logic from these extra features
+# allows multiple collaborators to work in different files
 class ShapeRenderer(ShapeRendererBase):
 
     def __init__(self, height, width, output):

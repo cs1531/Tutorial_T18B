@@ -1,5 +1,8 @@
 # Shape Renderer that currently supports Rectangles
 
+# dont worry about the render shapes function,
+# just know that it goes through each shape, and calls its render function
+# generating a html file afterwards 
 class ShapeRendererBase():
 
     def __init__(self, height, width, output):
