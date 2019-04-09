@@ -4,6 +4,17 @@
         <title>Menu page </title> 
     </head>
     <body>
-        <h1> Add item </h1> 
+        <h1> Menu Page </h1>
+        {% for i in my_menu %}
+        <h3>{{i.get_name()}} {{i.get_details()}}</h3>
+        {% endfor %}
+
+        <h2> Add item </h2> 
+
+        <form method='POST'>
+            <input name='food_name'></input>
+            <input name='food_details'></input>
+            <button name='bt' value='addtomenu' type='submit'>Add Item</button>
+        </form>
     </body>
 </html>
