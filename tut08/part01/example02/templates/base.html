@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      {% block head %}{% endblock %}
+    <title>Flask Template Example</title>
+    <style type="text/css">
+      .container {
+        max-width: 800px;
+        padding-top: 50px;
+      }
+      h2 {color: cornflowerblue;}
+      h3 {color: crimson;}
+      .nav  {padding: 4px; font-size: 14pt; font-weight: bold}
+    </style>
+  </head>
+  <body>
+    <!-- menu -->
+    <div class="container">
+      <h1>This nav bar is part of the base template</h1>
+      <div> <a class="nav" href="{{ url_for('index') }}">Home</a> 
+            <a class="nav" href="{{ url_for('users') }}">Greet Users</a> 
+            <a class="nav" href="{{ url_for('interest_total') }}">Interest Calculator</a> 
+      </div>
+      <br>
+      {% block content %}{% endblock %}
+      <br>
+      <h1>This footer is part of the base template</h1>
+    </div>
+  </body>
+</html>

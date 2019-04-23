@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+        
+<h3> Details page: Start of child template </h3>
+<form method="POST">
+    <input name="name" placeholder="Enter your name"/>
+    <input name="zID" placeholder="Enter your zID"/>
+    <input name="desc" placeholder="One line description"/>
+    <button type="submit" name="bt">Say Hi</button>
+</form>
+<h3> This is the end of the child template</h3>
+{% endblock %}

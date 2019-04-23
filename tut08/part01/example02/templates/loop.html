@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3> This is the start of my child template</h3>
+  <br>
+  <h3>Example01: Hello to all users</h3>
+  {% if all_users %}
+  {% for user in all_users %}
+    <p> Hi, {{ user[0] }}, (zID : {{ user[1] }} and {{ user[2] }}) </p>
+  {% endfor %}
+  {%else%}
+  No students to show
+  {% endif %}
+ <h3>Example02: looping through the list:</h3>
+  <ul>
+    {% for n in my_list %}
+    <li>{{n}}</li>
+    {% endfor %}
+  </ul>
+  <h3> This is the end of my child template</h3>
+{% endblock %}

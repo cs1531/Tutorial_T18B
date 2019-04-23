@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+        
+<h2> Greetings page: Start of child template </h2>
+{% if all_users %}
+    {% for user in all_users %}
+        <h3> Hi, {{ user[0] }}, (zID : {{ user[1] }} and {{ user[2] }}) </h3>
+    {% endfor %}
+{%else%}
+    No students to show
+{% endif %}
+
+<h2> End of child greetings template</h2>
+{% endblock %}

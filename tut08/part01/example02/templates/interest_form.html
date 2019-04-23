@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+		<h3> Interest Calculator: start of child template</h3>
+		<br>
+		<form method="POST">
+		<div style="margin: 10px 0px">
+			<label>Amount Invested ($): </label><br/>
+			<input name="invested" placeholder="Amount Invested"/>
+		</div>
+		<div style="margin: 10px 0px">
+			<label>Interest Rate (%): </label><br/>
+			<input name="rate" placeholder="Interest Rate"/>
+		</div>
+		<div style="margin: 10px 0px">
+			<label>Time Investment (Years): </label><br/>
+			<input name="time" placeholder="Time Invested">
+		</div>
+		<div style="margin: 10px 0px">
+			<label>Total Interest ($): </label><br/>
+			<input name="total" placeholder="Total Interest" value="{{total}}" {%if calc_total %}disabled{% endif %}/>
+		</div>
+		<div style="margin: 10px 0px">
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+	<h3> This is the end of the child template</h3>
+		
+</div>
+<div>
+	{{message}}
+</div>
+{% endblock %}
